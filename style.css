@@ -1,3 +1,12 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+body.dark {
+  --bg-color: linear-gradient(135deg, black, blue);
+  --text-color: #ffffff;
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +15,14 @@
 }
 
 body {
-    background: linear-gradient(black, blue);
+    background: var(--bg-color);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     color: white;
 }
+
+
 
 @keyframes pulse {
     0% {
@@ -31,7 +42,7 @@ body {
 }
 
 button {
-    background-color: rgb(10, 7, 43);
+    background-color: var(--cordefundo);
     color: white;
     border: 2px solid white;
     padding: 10px 20px;

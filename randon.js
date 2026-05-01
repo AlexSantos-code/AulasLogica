@@ -19,10 +19,10 @@ function apostar() {
     
 
     if (x == aposta) {
-        document.getElementById('resultado').innerHTML = 'acertou';
+        document.getElementById('resultado').innerHTML = 'Acertou! O número é ' + x.toFixed(1) + '. Parabéns!';
     }
  else {
-        document.getElementById('resultado').innerHTML = 'Errou! O número era ' + x + '. Tente de novo!';
+        document.getElementById('resultado').innerHTML = 'Errou! O número era ' + x.toFixed(1) + '. Tente de novo!';
 
     }
 

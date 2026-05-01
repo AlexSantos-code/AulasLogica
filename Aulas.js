@@ -1,4 +1,19 @@
 
+function toggleTheme() {
+  // Seleciona o elemento body
+  const body = document.body;
+  
+  // Verifica se a classe 'dark-mode' já está no body
+  if (body.classList.contains('dark')) {
+    body.classList.remove('dark');
+    console.log("Mudou para Tema Claro");
+  } else {
+    body.classList.add('dark');
+    console.log("Mudou para Tema Escuro");
+  }
+}
+
+
 function dobro() {
     let num = parseFloat(prompt("digite um numero"));
     let dobro = 2 * num;
