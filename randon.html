@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random</title>
-    <script src="Aulas.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random</title>
+  <script src="Aulas.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="header"></header>
+  <header class="header"></header>
   <main class="main-content"></main>
   <footer class="footer"></footer>
 
@@ -19,36 +21,192 @@
       <li><a href="contato.html">Contato</a></li>
       <li><a href="ferramentas.html">Ferramentas</a></li>
       <li><a href="ifelse.html">IfElse</a></li>
-      <li><a href="randon.html">Random</a></li> 
+      <li><a href="randon.html">Random</a></li>
       <button onclick="toggleTheme()">Alternar Tema</button>
     </ul>
   </nav>
 
-    <div>
+  <div>
     <h2>Números Aleatorios</h2>
     Informe o Número:
     <input type="number" id="insert">
-    <button onclick="gerarAleatório()" >Aleatorio</button>
-     Número Aleatorio:
+    <button onclick="gerarAleatório()">Aleatorio</button>
+    Número Aleatorio:
     <input type="text" id="random">
     Raiz Quadrada:
     <input type="text" id="random2">
     Potencia:
-      <input type="text" id="random3">
+    <input type="text" id="random3">
 
     let x = Math.random()
-    </div>
+  </div>
 
-    <div>
-        Jogo Aleatorio: <br><br>
-        Numero da Sorte <br>
-        <input type="number" id="aposta">
-        <button onclick="apostar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M342.5-257.5Q360-275 360-300t-17.5-42.5Q325-360 300-360t-42.5 17.5Q240-325 240-300t17.5 42.5Q275-240 300-240t42.5-17.5Zm0-360Q360-635 360-660t-17.5-42.5Q325-720 300-720t-42.5 17.5Q240-685 240-660t17.5 42.5Q275-600 300-600t42.5-17.5Zm180 180Q540-455 540-480t-17.5-42.5Q505-540 480-540t-42.5 17.5Q420-505 420-480t17.5 42.5Q455-420 480-420t42.5-17.5Zm180 180Q720-275 720-300t-17.5-42.5Q685-360 660-360t-42.5 17.5Q600-325 600-300t17.5 42.5Q635-240 660-240t42.5-17.5Zm0-360Q720-635 720-660t-17.5-42.5Q685-720 660-720t-42.5 17.5Q600-685 600-660t17.5 42.5Q635-600 660-600t42.5-17.5ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg></button>
-       <output id="resultado"></output>
-    </div>
+  <div>
+    Jogo Aleatorio: <br><br>
+    Numero da Sorte <br>
+    <input type="number" id="aposta">
+    <button onclick="apostar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+        width="24px" fill="#e3e3e3">
+        <path
+          d="M342.5-257.5Q360-275 360-300t-17.5-42.5Q325-360 300-360t-42.5 17.5Q240-325 240-300t17.5 42.5Q275-240 300-240t42.5-17.5Zm0-360Q360-635 360-660t-17.5-42.5Q325-720 300-720t-42.5 17.5Q240-685 240-660t17.5 42.5Q275-600 300-600t42.5-17.5Zm180 180Q540-455 540-480t-17.5-42.5Q505-540 480-540t-42.5 17.5Q420-505 420-480t17.5 42.5Q455-420 480-420t42.5-17.5Zm180 180Q720-275 720-300t-17.5-42.5Q685-360 660-360t-42.5 17.5Q600-325 600-300t17.5 42.5Q635-240 660-240t42.5-17.5Zm0-360Q720-635 720-660t-17.5-42.5Q685-720 660-720t-42.5 17.5Q600-685 600-660t17.5 42.5Q635-600 660-600t42.5-17.5ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z" />
+      </svg></button>
+    <output id="resultado"></output>
+  </div>
+
+  <div>
+    <h1>Função Enquanto (while)</h1>
+    <p>Aula 06/05/2026</p>
+
+    <input type="text" id="mensagem">
+    <h3 id="res3"></h3>
+    <button onclick="exibirMensagem()">Exibir</button>
+
+    <script>
+      // Primeira função feita em aula
+
+      function exibirMensagem() {
+        let cont = 1;
+        let texto = '';
+
+        do {
+          texto += document.getElementById('mensagem').value + "<br>";
+          cont++;
+
+          // texto += cont + "<br>";
+          // cont++;
+
+        } while (cont <= 5);
+
+        document.getElementById('res3').innerHTML = texto;
 
 
-    <script src="randon.js"></script>
-    
+      }
+    </script>
+  </div>
+
+  <div>
+    <h1>Função Enquanto (while) </h1>
+    <h1>i++</h1>
+    <div id="resu4"></div>
+    <h1>i--</h1>
+    <div id="resu5"></div>
+    <h1>i+=2</h1>
+    <div id="resu6"></div>
+    <h1>i-=2</h1>
+    <div id="resu7"></div>
+    <h1>--i</h1>
+    <div id="resu8"></div>
+    <h1>++i</h1>
+    <div id="resu9"></div>
+
+    <script>
+      let i = 1;
+
+      while (i <= 5) {
+        document.getElementById('resu4').innerHTML += i + "<br>";
+        i++;
+      }
+      while (i >= 1) {
+        document.getElementById('resu5').innerHTML += i + "<br>";
+        i--;
+      }
+      while (i <= 10) {
+        document.getElementById('resu6').innerHTML += i + "<br>";
+        i += 2;
+      }
+      while (i >= 5) {
+        document.getElementById('resu7').innerHTML += i + "<br>";
+        i -= 2;
+      }
+      while (i > 1) {
+        document.getElementById('resu8').innerHTML += --i + "<br>";
+
+      }
+      while (i < 5) {
+        document.getElementById('resu9').innerHTML += ++i + "<br>";
+
+      }
+    </script>
+  </div>
+  <div>
+    <h2>Cadrasto de senha</h2>
+    <input type="password" id="senha" placeholder="Digite sua senha">
+    <button onclick="cSenha()">Cadastrar</button>
+    <h3 id="resu10"></h3>
+    <script>
+      function cSenha() {
+        do {
+          let senha = document.getElementById('senha').value;
+
+          if (senha.length < 8 || senha.length > 12) {
+            document.getElementById('resu10').innerHTML = "A senha deve conter entre 8 e 12 caracteres.";
+            document.getElementById('senha').value = '';
+            return;
+          }
+        } while (senha.length < 8 || senha.length > 12);
+        document.getElementById('resu10').innerHTML = "Senha cadastrada com sucesso!";
+      }
+    </script>
+  </div>
+<div>
+  <h2>Cadrasto de senha|Salvar</h2>
+  <input type="password" id="senha2" placeholder="Digite sua senha">
+  <button onclick="cSenha2()">Cadastrar</button>
+  <h3 id="resu11"></h3>
+  <script>
+    function cSenha2() {
+      let senha = document.getElementById('senha2').value;
+      let cmensagem = document.getElementById('resu11');
+
+      if (senha.length < 8 || senha.length > 12) {
+          cmensagem.style.color = "red";
+          cmensagem.innerHTML = "A senha deve conter entre 8 e 12 caracteres.";
+          document.getElementById('senha').value = '';
+          return; // Para a execução se estiver errado
+        }
+
+        // 3. SALVANDO A SENHA
+        // localStorage.setItem('nome_da_chave', valor)
+        localStorage.setItem('senhaCadastrada', senha);
+
+        // 4. Feedback visual
+        cmensagem.style.color = "green";
+        cmensagem.innerHTML = "Senha cadastrada e salva com sucesso!";
+        document.getElementById('senha').value = '';
+
+        location.reload(); // Recarrega a página para atualizar a exibição da senha cadastrada
+        
+      }  
+  </script>
+
+  <div>
+    <h2 id="scadastrada"></h2>
+  <script>
+      let senhaSalva = localStorage.getItem('senhaCadastrada');
+      document.getElementById('scadastrada').innerHTML = "Senha cadastrada: " + senhaSalva;
+      
+     
+      function limparSenha() {
+        // Remove apenas o item específico
+        localStorage.removeItem('senhaCadastrada');
+        
+        
+        let campoMensagem = document.getElementById('resu11');
+        campoMensagem.style.color = "orange";
+        campoMensagem.innerHTML = "A senha salva foi removida do sistema.";
+        
+        // Opcional: Limpa o campo de texto também
+        document.getElementById('senha').value = '';
+        location.reload(); // Recarrega a página para atualizar a exibição da senha cadastrada
+      }
+  </script>
+ <!-- <button onclick="localStorage.removeItem('senhaCadastrada')">Limpar Senha</button> -->
+  <button onclick="limparSenha()">Limpar Senha</button>
+  </div>
+</div>
+
+  <script src="randon.js"></script>
+
 </body>
+
 </html>

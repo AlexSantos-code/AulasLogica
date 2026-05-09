@@ -1,6 +1,6 @@
 :root {
   --bg-color: #ffffff;
-  --text-color: #000000;
+  --text-color: #c7c7c7;
 }
 
 body.dark {
@@ -19,7 +19,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    color: white;
+    color: var(--text-color);
 }
 
 
@@ -99,6 +99,11 @@ button:hover {
     text-decoration: none;
     font-size: 20px;
     font-family: Arial, sans-serif;
+    background: rgb(69, 4, 250) ;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    
 }
 
 div {
@@ -107,7 +112,7 @@ div {
     background: linear-gradient(135deg, black, blue);
     border: 1px solid white;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.753);
-    border-radius: 30px;
+    border-radius: 10px;
     width: 50%;
     display: grid;
 
