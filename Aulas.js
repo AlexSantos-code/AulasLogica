@@ -1,17 +1,38 @@
 
 function toggleTheme() {
-  // Seleciona o elemento body
   const body = document.body;
   
-  // Verifica se a classe 'dark-mode' já está no body
+  // Alterna a classe 'dark'
+  body.classList.toggle('dark');
+
+  // Verifica se ficou dark ou não para salvar
   if (body.classList.contains('dark')) {
-    body.classList.remove('dark');
-    console.log("Mudou para Tema Claro");
+    localStorage.setItem('theme', 'dark');
+    console.log("Mudou para Tema Escuro e salvou");
   } else {
-    body.classList.add('dark');
-    console.log("Mudou para Tema Escuro");
+    localStorage.setItem('theme', 'light');
+    console.log("Mudou para Tema Claro e salvou");
   }
 }
+window.onload = () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark');
+  }
+};
+// function toggleTheme() {
+//   // Seleciona o elemento body
+//   const body = document.body;
+  
+//   // Verifica se a classe 'dark-mode' já está no body
+//   if (body.classList.contains('dark')) {
+//     body.classList.remove('dark');
+//     console.log("Mudou para Tema Claro");
+//   } else {
+//     body.classList.add('dark');
+//     console.log("Mudou para Tema Escuro");
+//   }
+// }
 
 
 function dobro() {
