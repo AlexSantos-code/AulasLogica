@@ -20,6 +20,18 @@ window.onload = () => {
     document.body.classList.add('dark');
   }
 };
+// função de ativar o menu responsivo
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
+
+// Otimização: Fechar o menu ao clicar em um link (opcional)
+document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.menu').classList.remove('active');
+    });
+});
 // function toggleTheme() {
 //   // Seleciona o elemento body
 //   const body = document.body;

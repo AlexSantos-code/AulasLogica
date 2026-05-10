@@ -3,12 +3,14 @@
     --text-color: #000000;
     --cor-botao: rgb(69, 4, 250);
     --input-color: rgba(87, 87, 87, 0.616);
+    --bg-card: #d1d1d1;
 }
 
 body.dark  {
     --bg-color: linear-gradient(135deg, black, blue);
     --text-color: #ffffff;
-    --input-color:
+    --input-color: #2726268e;
+    --bg-card: linear-gradient(135deg, black, blue);
 }
 /* input.dark {
     
@@ -80,15 +82,19 @@ button:hover {
 
 .header {
     background-color: black;
-    top: 0;
-    left: 0;
+    position: sticky;
+    top: 0 ;
+    
     width: 100%;
     z-index: 1000;
+    border-bottom: 1px solid #333;
 }
 
-.container {
+.container-nav {
     max-width: 100%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -115,14 +121,31 @@ button:hover {
     padding: 5px;
     border-radius: 10px;
     border: 1px solid #ffffff;
+    transition: 0.3s;
 
 }
-
+.menu ul li a:hover {
+    background: #4504fa;
+    color: white; 
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    }
 div {
     padding: 10px;
-    margin: 10px auto;
-    background: linear-gradient(--bg-color,);
-    border: 1px solid white;
+    margin: 0 auto ;
+    
+    background: var(--bg-card);
+    /* border: 1px solid white; */
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.500);
     border-radius: 10px;
 
@@ -131,6 +154,7 @@ div {
     display: grid;
 
 }
+
 
 input {
     background-color: var(--input-color);
@@ -178,3 +202,38 @@ button {
     flex-wrap: wrap;
     gap: 5px;
 }
+.container-nav {
+        justify-content: flex-start; /* Alinha o botão à esquerda */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        display: none; /* Esconde o menu */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        
+        background-color: rgba(0, 0, 0, 0.95);
+    }
+
+    .menu.active {
+        display: block; /* Mostra ao clicar */
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .menu ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu ul li a {
+        display: block;
+        margin-bottom: 10px;
+    }

@@ -8,22 +8,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header"></header>
-  <main class="main-content"></main>
-  <footer class="footer"></footer>
+   <header class="header">
+    <div class="container-nav">
+      <!-- Botão Hambúrguer -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
 
-  <nav class="menu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="sobre1.html">Sobre</a></li>
-      <li><a href="contato.html">Contato</a></li>
-      <li><a href="ferramentas.html">Ferramentas</a></li>
-      <li><a href="ifelse.html">IfElse</a></li>
-      <li><a href="randon.html">Random</a></li>  
-      <button onclick="toggleTheme()">Alternar Tema</button>
-    </ul>
-
-  </nav>
+      <!-- Navegação -->
+      <nav class="menu">
+        <ul id="menu-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre1.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="ferramentas.html">Ferramentas</a></li>
+          <li><a href="ifelse.html">IfElse</a></li>
+          <li><a href="randon.html">Random</a></li>
+          <li><button id="theme-toggle" onclick="toggleTheme()">🌓 Tema</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
     <h3>Alexsandro Junior dos Santos</h3>
     <p>Email: alexsandro.junior@example.com</p>
     <p>Telefone: (11) 1234-5678</p>
