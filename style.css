@@ -6,12 +6,13 @@
     --bg-card: #d1d1d1;
 }
 
-body.dark  {
+body.dark {
     --bg-color: linear-gradient(135deg, black, blue);
     --text-color: #ffffff;
     --input-color: #2726268e;
     --bg-card: linear-gradient(135deg, black, blue);
 }
+
 /* input.dark {
     
     
@@ -81,69 +82,117 @@ button:hover {
 }
 
 .header {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Leve transparência para elegância */
+    backdrop-filter: blur(10px);
+    /* Efeito de vidro fosco moderno */
     position: sticky;
-    top: 0 ;
-    
+    top: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
 }
 
 .container-nav {
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    
+
 
 }
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #6a4bc2;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+   
+    
+}
 
+.logo a {
+    color: white;
+    background: #c2e14b;
+    padding: 1px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.500); 
+    
+}
+.logo a span {
+    color: var(--cor-botao); /* Destaque no nome */
+    border-radius: 15px 5px 10px 5px;
+    background: #000000;
+    padding: 10px ;
+     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.500);
+}
 .menu ul {
     display: flex;
-    justify-content: center;
-    /* margin-top: 20px; */
-    padding: 20px;
     align-items: center;
-    flex-wrap: wrap;
-    color: purple;
-    background-color: black;
     list-style: none;
-    gap: 20px;
+    gap: 25px;
+    background-color: transparent;
+
 
 }
 
 .menu ul li a {
-    color: rgb(177, 175, 175);
+    color: #ccc;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     font-family: Arial, sans-serif;
-    background: rgb(69, 4, 250);
-    padding: 5px;
-    border-radius: 10px;
-    border: 1px solid #ffffff;
-    transition: 0.3s;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    background: none; /* Remove o fundo de botão dos links */
+    border: none;
+    padding: 0;
 
 }
+
 .menu ul li a:hover {
     background: #4504fa;
-    color: white; 
+    color: white;
+    border-radius: 5px;
 }
+/* --- Botão de Tema Especial --- */
+
+
+.btn-theme:hover {
+    transform: translateY(-2px);
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
     gap: 5px;
     padding: 15px;
     cursor: pointer;
+    margin-left: 5px;
+    width: 55px;
+    
 }
+
 .bar {
     width: 25px;
     height: 3px;
     background-color: white;
-    }
+
+}
+
 div {
     padding: 10px;
-    margin: 0 auto ;
-    
+    margin: 0 auto;
+
     background: var(--bg-card);
     /* border: 1px solid white; */
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.500);
@@ -171,11 +220,13 @@ input {
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.500);
     transition: border 0.3s ease, box-shadow 0.3s ease;
 }
+
 input:focus {
     border: 1px solid rgb(69, 4, 250);
     box-shadow: 0px 5px 25px rgba(69, 4, 250, 0.753);
     outline: none;
 }
+
 input:hover {
     border: 1px solid rgb(69, 4, 250);
     box-shadow: 0px 5px 25px rgba(69, 4, 250, 0.753);
@@ -201,39 +252,65 @@ button {
     /* Alinha botões lado a lado se couberem */
     flex-wrap: wrap;
     gap: 5px;
+    width: 90%;
+   margin: 0 auto;
+    max-width: 600px;
+    
+    /* background-color: yellow; */
 }
+
 .container-nav {
-        justify-content: flex-start; /* Alinha o botão à esquerda */
-    }
+    justify-content: flex-start;
+    /* background: turquoise; */
+    margin-left: 0;
+    
+   
+    /* Alinha o botão à esquerda */
+}
 
-    .hamburger {
-        display: flex;
-    }
+.hamburger {
+    display: flex;
+}
 
-    .menu {
-        display: none; /* Esconde o menu */
-        position: absolute;
-        top: 60px;
-        left: 0;
-        
-        background-color: rgba(0, 0, 0, 0.95);
-    }
+.menu {
+    display: none;
+    /* Esconde o menu */
+    position: absolute;
+    top: 100px;
+    left: 110px;
+    border-radius: 30% 10px 30% 10px;
 
-    .menu.active {
-        display: block; /* Mostra ao clicar */
-    }
+    background-color: rgba(0, 0, 0, 0.95);
+}
 
-    .menu ul {
-        flex-direction: column;
-        padding: 20px;
-    }
+.menu.active {
+    display: block;
+    /* Mostra ao clicar */
+}
 
-    .menu ul li {
-        width: 100%;
-        text-align: center;
-    }
+.menu ul {
+    flex-direction: column;
+    padding: 20px;
+}
 
-    .menu ul li a {
-        display: block;
-        margin-bottom: 10px;
-    }
+.menu ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.menu ul li a {
+    display: block;
+    margin-bottom: 10px;
+}
+.footer {
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px ;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ccc;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    position:absolute;
+}
