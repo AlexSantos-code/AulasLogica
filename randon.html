@@ -13,8 +13,8 @@
   <header class="header">
     <div class="container-nav">
       <div class="logo">
-      <a href="index.html">JS<span>Master</span></a>
-    </div>
+        <a href="index.html">JS<span>Master</span></a>
+      </div>
       <!-- Botão Hambúrguer -->
       <div class="hamburger" onclick="toggleMenu()">
         <span class="bar"></span>
@@ -94,7 +94,6 @@
       }
     </script>
   </div>
-
   <div>
     <h1>Função Enquanto (while) </h1>
     <h1>i++</h1>
@@ -159,17 +158,17 @@
       }
     </script>
   </div>
-<div>
-  <h2>Cadrasto de senha|Salvar</h2>
-  <input type="password" id="senha2" placeholder="Digite sua senha">
-  <button onclick="cSenha2()">Cadastrar</button>
-  <h3 id="resu11"></h3>
-  <script>
-    function cSenha2() {
-      let senha = document.getElementById('senha2').value;
-      let cmensagem = document.getElementById('resu11');
+  <div>
+    <h2>Cadrasto de senha|Salvar</h2>
+    <input type="password" id="senha2" placeholder="Digite sua senha">
+    <button onclick="cSenha2()">Cadastrar</button>
+    <h3 id="resu11"></h3>
+    <script>
+      function cSenha2() {
+        let senha = document.getElementById('senha2').value;
+        let cmensagem = document.getElementById('resu11');
 
-      if (senha.length < 8 || senha.length > 12) {
+        if (senha.length < 8 || senha.length > 12) {
           cmensagem.style.color = "red";
           cmensagem.innerHTML = "A senha deve conter entre 8 e 12 caracteres.";
           document.getElementById('senha').value = '';
@@ -186,37 +185,109 @@
         document.getElementById('senha').value = '';
 
         location.reload(); // Recarrega a página para atualizar a exibição da senha cadastrada
-        
+
       }  
-  </script>
+    </script>
+  </div>
 
   <div>
     <h2 id="scadastrada"></h2>
-  <script>
+    <script>
       let senhaSalva = localStorage.getItem('senhaCadastrada');
       document.getElementById('scadastrada').innerHTML = "Senha cadastrada: " + senhaSalva;
-      
-     
+
+
       function limparSenha() {
         // Remove apenas o item específico
         localStorage.removeItem('senhaCadastrada');
-        
-        
+
+
         let campoMensagem = document.getElementById('resu11');
         campoMensagem.style.color = "orange";
         campoMensagem.innerHTML = "A senha salva foi removida do sistema.";
-        
+
         // Opcional: Limpa o campo de texto também
         document.getElementById('senha').value = '';
         location.reload(); // Recarrega a página para atualizar a exibição da senha cadastrada
       }
-  </script>
- <!-- <button onclick="localStorage.removeItem('senhaCadastrada')">Limpar Senha</button> -->
-  <button onclick="limparSenha()">Limpar Senha</button>
+    </script>
+    <!-- <button onclick="localStorage.removeItem('senhaCadastrada')">Limpar Senha</button> -->
+    <button onclick="limparSenha()">Limpar Senha</button>
+
   </div>
-</div>
+
+
+  <div>
+    <H1>Aula for 12/05/2026 <br><br></H1>
+
+    <h2>Sistema de vendas: </h2>
+    <input type="number" id="quant">
+    <h3 id="resultado10"></h3>
+    <button onclick="vendas()">Vendas</button>
+  </div>
+
+  <div>
+    <h2>Lista de Compras</h2>
+
+    Digite um item:
+    <input type="text" id="item">
+
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="remover()">Apagar</button>
+
+    <h3 id="resultado1"></h3>
+  </div>
+
+  <div>
+    <h1>Lista de Compras v2</h1>
+    <input type="text" id="item1">
+
+    <button onclick="adicionar1()">Adicionar</button>
+    <button onclick="remover1()">Remover</button>
+    <h3 id="resultado2"></h3>
+
+  </div>
+  <div>
+    <h2>Diferenças entre While, do While e For</h2>
+  </div>
+  <div>
+
+    <h3>While</h3>
+    <p>O loop while é usado quando não sabemos quantas vezes o loop deve ser
+      executado. Ele verifica a condição antes de executar o bloco de código, o que significa que se a condição for
+      falsa desde o início, o bloco de código não será executado nenhuma vez.</p>
+
+      <h2>Cadastro com WHILE</h2>
+
+      <button onclick="cadastroWhile()">Cadastrar</button>
+      <h3 id="res40"></h3>
+  </div>
+  <div>
+    <h3>Do While</h3>
+    <p>O loop do while é semelhante ao while, mas a condição é verificada após a execução do bloco de código. Isso
+      significa que o bloco de código será executado pelo menos uma vez, mesmo que a condição seja falsa desde o início.
+    </p>
+    <h2>Cadastro com Do WHILE</h2>
+
+      <button onclick="cadastroDoWhile()">Cadastrar</button>
+      <h3 id="res50"></h3>
+  </div>
+  <div>
+    <h3>For</h3>
+    <p>O loop for é usado quando sabemos quantas vezes o loop deve ser executado. Ele é composto por três partes: a
+      inicialização, a condição e a atualização. A inicialização é executada apenas uma vez no início do loop, a
+      condição é verificada antes de cada iteração e a atualização é executada após cada iteração.</p>
+      <h2>Cadastro com FOR</h2>
+
+      <button onclick="cadastroFor()">Cadastrar</button>
+      <h3 id="res60"></h3>
+  </div>
+
+
+
 
   <script src="randon.js"></script>
+  <!-- <script src="ifelse.js"></script> -->
 
 </body>
 

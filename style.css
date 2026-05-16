@@ -101,10 +101,11 @@ button:hover {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    
+
 
 
 }
+
 .logo {
     width: 100px;
     height: 100px;
@@ -113,29 +114,31 @@ button:hover {
     justify-content: center;
     align-items: center;
     margin: 10px;
-   
-    
+
+
 }
 
 .logo a {
     color: white;
     background: #c2e14b;
-    padding: 1px;
     border-radius: 10px;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
-     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.500); 
-    
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.500);
+
 }
+
 .logo a span {
-    color: var(--cor-botao); /* Destaque no nome */
+    color: var(--cor-botao);
+    /* Destaque no nome */
     border-radius: 15px 5px 10px 5px;
     background: #000000;
-    padding: 10px ;
-     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.500);
+    padding: 10px;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.500);
 }
+
 .menu ul {
     display: flex;
     align-items: center;
@@ -153,7 +156,8 @@ button:hover {
     font-family: Arial, sans-serif;
     font-weight: 500;
     transition: color 0.3s ease;
-    background: none; /* Remove o fundo de botão dos links */
+    background: none;
+    /* Remove o fundo de botão dos links */
     border: none;
     padding: 0;
 
@@ -164,6 +168,7 @@ button:hover {
     color: white;
     border-radius: 5px;
 }
+
 /* --- Botão de Tema Especial --- */
 
 
@@ -179,7 +184,9 @@ button:hover {
     cursor: pointer;
     margin-left: 5px;
     width: 55px;
-    
+    /* Remover efeitos  */
+    background: none;
+    box-shadow: none;
 }
 
 .bar {
@@ -192,6 +199,7 @@ button:hover {
 div {
     padding: 10px;
     margin: 0 auto;
+    margin-top: 10px;
 
     background: var(--bg-card);
     /* border: 1px solid white; */
@@ -253,9 +261,9 @@ button {
     flex-wrap: wrap;
     gap: 5px;
     width: 90%;
-   margin: 0 auto;
+    margin: 0 auto;
     max-width: 600px;
-    
+
     /* background-color: yellow; */
 }
 
@@ -263,8 +271,8 @@ button {
     justify-content: flex-start;
     /* background: turquoise; */
     margin-left: 0;
-    
-   
+
+
     /* Alinha o botão à esquerda */
 }
 
@@ -302,15 +310,16 @@ button {
     display: block;
     margin-bottom: 10px;
 }
+
 .footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding: 15px ;
+    padding: 15px;
     background-color: rgba(0, 0, 0, 0.9);
     color: #ccc;
     font-size: 14px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 20px;
-    position:absolute;
+    position: absolute;
 }
